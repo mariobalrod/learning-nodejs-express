@@ -13,5 +13,5 @@ Tecnologías usadas:
 
 ### Plantilla Web
 
-![PlantillaWeb](/home/mariobalrod/Desktop/node-first-web/docs/PlantillaWeb.png)
+![PlantillaWeb](docs/PlantillaWeb.png)
 
