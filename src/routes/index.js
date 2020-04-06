@@ -5,13 +5,13 @@ const router = express.Router();
 // Routes
 
 router.get('/', (req, res) => {
-    res.render('index.html', {title: 'Home Page'});
+    res.render('index', {title: 'Home Page'});
 });
 router.get('/register', (req, res) => {
-    res.render('register.html', {title: 'Register Page'});
+    res.render('register', {title: 'Register Page'});
 });
 router.get('/contact', (req, res) => {
-    res.render('contact.html', {title: 'Contact Page'});
+    res.render('contact', {title: 'Contact Page'});
 });
 
 
