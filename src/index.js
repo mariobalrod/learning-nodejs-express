@@ -1,5 +1,6 @@
 const express = require('express');
 const server = express();
+const ejs = require('ejs');
 
 /*
     Para unir directorios path.join(),
@@ -12,15 +13,12 @@ const path = require('path');
 server.set('port', 8080);
     //_dirname : nos da la ruta absoluta
 server.set('views', path.join(__dirname, 'views'));
-server.set('view engine', 'ejs');
+server.set('view engine', ejs);
+    //configuracion del motor de plantillas para usar .html en vez de .ejs
+server.engine('html', ejs.renderFile);
 
 // Routes
-server.get('/', (req, res) => {
-    res.render('index', {title: 'Home Page'});
-});
-server.get('/register', (req, res) => {
-    res.render('index', {title: 'Register Page'});
-});
+server.use(require('./routes/index'));
 
 // Listening the server
 server.listen(server.get('port'), () => {
